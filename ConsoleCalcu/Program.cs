@@ -2,7 +2,7 @@
 
     static void Main(string[] args)
     {
-        Console.WriteLine("Simple Calculator (Supports '-' and '+')");
+        Console.WriteLine("Simple Calculator (Supports '-' '+' 'x' '%')");
         while (true)
         {
 
@@ -12,7 +12,7 @@
             if (aInput.Trim().ToLower() == "q") break;
             if (!double.TryParse(aInput, out double a)) { Console.WriteLine("Invalid number"); continue; }
 
-            Console.Write("Choose operation ('-' or '+')\n");
+            Console.Write("Choose operation ('-' '+' 'x' '%')\n");
             var op = Console.ReadLine()?.Trim();
 
 
@@ -23,6 +23,8 @@
             double result = 0;
             if (op == "+") result = a + b;
             else if(op == "-") result = a - b;
+            else if (op == "x") result = a * b;
+            else if (op == "%") result = a / b;
             else { Console.WriteLine("Invalid operation"); continue; }
 
             Console.WriteLine($"Result: {result}\n");
