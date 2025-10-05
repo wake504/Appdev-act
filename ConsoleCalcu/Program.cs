@@ -29,7 +29,7 @@
 
             Console.WriteLine($"Result: {result}\n");
 
-            Console.WriteLine("This is added remotely");
+
         }
 
     }
